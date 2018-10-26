@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 기본색 -->
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!-- 배경색 -->
+    <color name="backgroundBegin">#FB23E1</color>
+    <color name="backgroundEnd">#89FFFD</color>
+
+    <!-- 로그인 화면 -->
+    <color name="loginButton">#8A9BF2</color>
 </resources>

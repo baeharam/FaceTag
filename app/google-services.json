@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "98189945012",
+    "firebase_url": "https://facetag-a3d24.firebaseio.com",
+    "project_id": "facetag-a3d24",
+    "storage_bucket": "facetag-a3d24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98189945012:android:c62d2c25c29760b9",
+        "android_client_info": {
+          "package_name": "com.haram.facetag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98189945012-uhd7ffirkb6ee3i722q3g32kae5kk82g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlSjIgAILvQVTnPMGGdX4HV2f0xwd-E5s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
