@@ -5,9 +5,10 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background"
-    tools:context=".GenderActivity">
+    tools:context=".SexActivity">
 
     <FrameLayout
+        android:id="@+id/sex_male"
         android:layout_width="300dp"
         android:layout_height="200dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -19,7 +20,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/gender_box"/>
+            android:src="@drawable/sex_box"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -41,6 +42,7 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/sex_female"
         android:layout_width="300dp"
         android:layout_height="200dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -52,7 +54,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/gender_box"/>
+            android:src="@drawable/sex_box"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -72,5 +74,15 @@
             android:textColor="@android:color/black"
             android:gravity="center"/>
     </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/sex_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.93"/>
 
 </android.support.constraint.ConstraintLayout>

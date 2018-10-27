@@ -22,4 +22,11 @@
     <!-- 성별 선택 화면 -->
     <string name="male">남자</string>
     <string name="female">여자</string>
+
+    <!-- DB -->
+    <string name="field_sex">sex</string>
+    <string name="field_sex_male">m</string>
+    <string name="field_sex_female">f</string>
+    <string name="invalid_input">뭔가 잘못되었습니다.</string>
+    <string name="collection_user">User</string>
 </resources>
