@@ -29,4 +29,16 @@
     <string name="field_sex_female">f</string>
     <string name="invalid_input">뭔가 잘못되었습니다.</string>
     <string name="collection_user">User</string>
+
+    <!-- 분석시작 화면 -->
+    <string name="analyze_message1">당신을 분석해드립니다</string>
+    <string name="analyze_message2">이제까지 진부한 미팅 어플에 질리셨나요?</string>
+    <string name="analyze_message3">저희는 최첨단 기술을 사용하여 매칭을 이루어 드립니다.</string>
+    <string name="analyze_begin">분석하기</string>
+    <string name="analyze_face_detection">Face Detection</string>
+    <string name="analyze_image_labeling">Image Labeling</string>
+    <string name="analyze_face_message1">당신의 셀카를 이용해서 행복지수를 측정해보세요.</string>
+    <string name="analyze_face_message2">인공지능이 당신의 얼굴 표정을 분석해줍니다.</string>
+    <string name="analyze_image_message1">사진첩을 통해서 당신의 일상을 분석해보세요.</string>
+    <string name="analyze_image_message2">인공지능을 통해 관심사를 파악해드립니다.</string>
 </resources>

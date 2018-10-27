@@ -70,14 +70,14 @@ public class MainActivity extends AppCompatActivity {
 
                 if(isCompleted()){
                     progressBar.setVisibility(View.VISIBLE);
-                    loginByFirebase();
+                    loginByFirebase(false);
                 }
             }
         });
     }
 
     // Firebase 인증으로 로그인
-    private void loginByFirebase() {
+    private void loginByFirebase(final boolean isFirst) {
         editText_email.setEnabled(false);
         editText_password.setEnabled(false);
 
@@ -85,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(MainActivity.this, SexActivity.class));
+                    Intent intent = new Intent(MainActivity.this, isFirst?SexActivity.class:AnalyzeActivity.class);
+                    startActivity(intent);
                     finish();
                 } else {
                     editText_email.setEnabled(true);
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(MainActivity.this, getString(R.string.register_complete), Toast.LENGTH_SHORT)
                                 .show();
-                        loginByFirebase();
+                        loginByFirebase(true);
                     }
                 });
     }

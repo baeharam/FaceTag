@@ -39,6 +39,7 @@ public class SexActivity extends AppCompatActivity {
         male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 selectSex(getString(R.string.field_sex_male));
             }
         });
@@ -46,6 +47,7 @@ public class SexActivity extends AppCompatActivity {
         female.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 selectSex(getString(R.string.field_sex_female));
             }
         });

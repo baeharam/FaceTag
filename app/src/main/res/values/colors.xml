@@ -12,4 +12,7 @@
     <!-- 로그인 화면 -->
     <color name="loginButton">#8A9BF2</color>
     <color name="registerButton">#fc5858</color>
+
+    <!-- 분석시작 화면 -->
+    <color name="analyzeButton">#7883E7</color>
 </resources>
