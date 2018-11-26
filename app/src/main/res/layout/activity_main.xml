@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/background"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -23,24 +23,33 @@
             android:focusable="true"
             android:focusableInTouchMode="true">
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/logo"
-                android:layout_marginTop="100dp"/>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/white_circle"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/logo"/>
+            </FrameLayout>
 
             <EditText
                 android:id="@+id/main_edittext_email"
                 android:inputType="textEmailAddress"
-                android:hint="@string/email"
+                android:hint="@string/main_email"
                 android:layout_marginTop="50dp"
                 style="@style/EditTextTheme"/>
 
             <EditText
                 android:id="@+id/main_edittext_password"
                 android:inputType="textPassword"
-                android:hint="@string/password"
+                android:hint="@string/main_password"
                 android:layout_marginTop="10dp"
                 style="@style/EditTextTheme"/>
 
@@ -50,8 +59,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:background="@color/loginButton"
-                android:text="@string/login"
+                android:background="@color/main_login_button"
+                android:text="@string/main_login"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"/>
             <Button
@@ -60,8 +69,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:background="@color/registerButton"
-                android:text="@string/register"
+                android:background="@color/main_register_button"
+                android:text="@string/main_register"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"/>
 

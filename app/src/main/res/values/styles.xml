@@ -8,8 +8,16 @@
 
         <!-- 상태바와 타이틀바 숨기기 -->
         <item name="windowNoTitle">true</item>
+
+        <!-- 폰트 적용 -->
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle</item>
     </style>
 
+    <!-- EditText 테마 -->
     <style name="EditTextTheme">
         <item name="android:layout_width">350dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -19,4 +27,31 @@
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
+    <!-- 분석 화면 큰 제목 스타일 -->
+    <style name="intro_analyze_title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/intro_primary</item>
+        <item name="android:fontFamily">@font/nanum_extrabold</item>
+    </style>
+
+    <!-- Custom font style 일괄적용 -->
+    <style name="TextViewStyle" parent="@android:style/Widget.DeviceDefault.TextView">
+        <item name="android:fontFamily">@font/nanum_bold</item>
+    </style>
+
+    <style name="ButtonStyle" parent="@android:style/Widget.DeviceDefault.Button.Borderless">
+        <item name="android:fontFamily">@font/nanum_bold</item>
+    </style>
+
+    <style name="EditTextStyle" parent="@android:style/Widget.DeviceDefault.EditText">
+        <item name="android:fontFamily">@font/nanum_bold</item>
+    </style>
+
+    <style name="RadioButtonStyle" parent="@android:style/Widget.DeviceDefault.CompoundButton.RadioButton">
+        <item name="android:fontFamily">@font/nanum_bold</item>
+    </style>
+
+    <style name="CheckboxStyle" parent="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox">
+        <item name="android:fontFamily">@font/nanum_bold</item>
+    </style>
 </resources>

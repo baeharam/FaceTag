@@ -6,13 +6,15 @@
     <color name="colorAccent">#D81B60</color>
 
     <!-- 배경색 -->
-    <color name="backgroundBegin">#FB23E1</color>
-    <color name="backgroundEnd">#89FFFD</color>
+    <color name="background">#F9E1E1</color>
 
     <!-- 로그인 화면 -->
-    <color name="loginButton">#8A9BF2</color>
-    <color name="registerButton">#fc5858</color>
+    <color name="main_login_button">#EF8E8E</color>
+    <color name="main_register_button">#7883E7</color>
+
+    <!-- 성별선택 화면 -->
+    <color name="sex_select">#EF8E8E</color>
 
     <!-- 분석시작 화면 -->
-    <color name="analyzeButton">#7883E7</color>
+    <color name="intro_primary">#EF8E8E</color>
 </resources>

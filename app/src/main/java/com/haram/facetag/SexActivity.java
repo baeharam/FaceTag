@@ -3,7 +3,6 @@ package com.haram.facetag;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,7 +39,7 @@ public class SexActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                selectSex(getString(R.string.field_sex_male));
+                selectSex(getString(R.string.sex_field_male));
             }
         });
 
@@ -48,7 +47,7 @@ public class SexActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                selectSex(getString(R.string.field_sex_female));
+                selectSex(getString(R.string.sex_field_female));
             }
         });
     }
@@ -57,12 +56,12 @@ public class SexActivity extends AppCompatActivity {
         male.setEnabled(false);
         female.setEnabled(false);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection(getString(R.string.collection_user)).document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .update(getString(R.string.field_sex),sex)
+        db.collection(getString(R.string.sex_collection_user)).document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .update(getString(R.string.sex_field_sex),sex)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        startActivity(new Intent(SexActivity.this, AnalyzeActivity.class));
+                        startActivity(new Intent(SexActivity.this, IntroActivity.class));
                         finish();
                     }
                 })
@@ -72,7 +71,7 @@ public class SexActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.INVISIBLE);
                         male.setEnabled(true);
                         female.setEnabled(true);
-                        Toast.makeText(SexActivity.this, getString(R.string.invalid_input), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SexActivity.this, getString(R.string.sex_invalid_input), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

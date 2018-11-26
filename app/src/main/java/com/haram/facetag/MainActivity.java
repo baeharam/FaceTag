@@ -1,5 +1,6 @@
 package com.haram.facetag;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(MainActivity.this, isFirst?SexActivity.class:AnalyzeActivity.class);
+                    Intent intent = new Intent(MainActivity.this, isFirst?SexActivity.class:IntroActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.INVISIBLE);
                         editText_email.setEnabled(true);
                         editText_password.setEnabled(true);
-                        Toast.makeText(MainActivity.this, getString(R.string.login_fail), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, getString(R.string.main_login_fail), Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -123,10 +124,10 @@ public class MainActivity extends AppCompatActivity {
                             try {
                                 throw task.getException();
                             } catch(FirebaseAuthUserCollisionException e) {
-                                editText_email.setError(getString(R.string.user_collision));
+                                editText_email.setError(getString(R.string.main_user_collision));
                                 editText_email.requestFocus();
                             } catch(FirebaseAuthInvalidCredentialsException e) {
-                                editText_email.setError(getString(R.string.invalid_email));
+                                editText_email.setError(getString(R.string.main_invalid_email));
                                 editText_email.requestFocus();
                             } catch(Exception e){
                                 e.printStackTrace();
@@ -145,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(MainActivity.this, getString(R.string.register_complete), Toast.LENGTH_SHORT)
+                        Toast.makeText(MainActivity.this, getString(R.string.main_register_complete), Toast.LENGTH_SHORT)
                                 .show();
                         loginByFirebase(true);
                     }
@@ -155,15 +156,15 @@ public class MainActivity extends AppCompatActivity {
     // 비어있는 부분이 없는지 확인
     private boolean isCompleted(){
         if(TextUtils.isEmpty(email)){
-            editText_email.setError(getString(R.string.empty_email));
+            editText_email.setError(getString(R.string.main_empty_email));
             editText_email.requestFocus();
             return false;
         } else if(TextUtils.isEmpty(password)){
-            editText_password.setError(getString(R.string.empty_password));
+            editText_password.setError(getString(R.string.main_empty_password));
             editText_password.requestFocus();
             return false;
         } else if(password.length()<6){
-            editText_password.setError(getString(R.string.invalid_password));
+            editText_password.setError(getString(R.string.main_invalid_password));
             editText_password.requestFocus();
             return false;
         }

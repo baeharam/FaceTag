@@ -1,4 +1,3 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
-    <solid android:color="@color/intro_primary" />
-    <corners android:radius="5dp"/>
+    <solid android:color="@color/sex_select" />
 </shape>
