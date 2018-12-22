@@ -40,4 +40,7 @@
     <string name="intro_il_message1">사진첩을 통해서 당신의 일상을 분석해보세요.</string>
     <string name="intro_il_message2">인공지능을 통해 관심사를 파악해드립니다.</string>
     <string name="intro_permission_message">사진을 찍으려면 권한이 필요합니다.</string>
+
+    <!-- 분석진행 화면 -->
+    <string name="analyze_message">분석중입니다...</string>
 </resources>

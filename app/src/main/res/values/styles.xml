@@ -19,7 +19,7 @@
 
     <!-- EditText 테마 -->
     <style name="EditTextTheme">
-        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/edittext_box</item>
         <item name="android:padding">8dp</item>
